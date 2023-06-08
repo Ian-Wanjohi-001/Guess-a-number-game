@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript project 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body id="body-color">
+    <header class="game-header">
+        <h2 class="game-text">Guess a number between 1 and 300 </h2>
+        <button class="game-btn">New game</button> <br>
+    </header>
+
+    <div class="game-body">
+        <h2 class="game-alert"></h2>
+        <input type="number" id="game-input" class="Game-input">
+        <h2 class="game-text"></h2>
+        <button class="game-btn">Guess</button>
+    </div>
+
+    <div class="sounds">
+        <audio src="./media/audio/wrong-answer-high.mp3" id="sound-error-high"></audio>
+        <audio src="./media/audio/wrong-answer-low.mp3" id="sound-error-low"></audio>
+        <audio src="./media/audio/correct-answer.mp3" id="sound-success"></audio>
+    </div>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript project 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <header class="game-header">
+        <h2 class="game-text">Guess a number between 1 and 300 </h2>
+        <button class="game-btn"> New game</button> <br><br>
+    </header>
+
+    <div class="game-body">
+        <input type="number" name="" id="game-input" class="game-input">
+
+        <h2 class="game-text"></h2>
+        <button class="game-btn">Guess</button>
+    </div>
+
+    <script>
+        const gameButtons = document.querySelectorAll('.game-btn');
+        const gameText = document.getElementsByClassName('game-text');
+        const gameInput = document.getElementById("game-input");
+        const gameAlert = document.getElementById("game-alert"); // add this line to fix a reference error
+
+        let secretNumber;
+
+        gameButtons[0].addEventListener('click', function(){
+            secretNumber = Math.floor(Math.random()*300);
+            gameText[0].innerText = "";
+            gameAlert.innerText = "A new number has been generated for you, good luck guessing it!";
+            document.body.style.backgroundColor = "white";
+        });
+
+        gameButtons[1].addEventListener('click', function(){
+            let userGuess = gameInput.value;
+            if (userGuess === ""){
+                gameText[1].innerText = "Please provide a number.";
+                document.body.style.backgroundColor = "green";
+            } else if (secretNumber === parseInt(userGuess)){
+                gameText[1].innerText = "You found the correct number , you have won.";
+                document.body.style.backgroundColor = "yellow";
+            } else if (parseInt(userGuess) > secretNumber){
+                gameText[1].innerText = `${userGuess} is too High.`;
+                document.body.style.backgroundColor = "red";
+            } else if (parseInt(userGuess) < secretNumber){
+                gameText[1].innerText = `${userGuess} is too low.`;
+                document.body.style.backgroundColor = "cyan";
+            }
+            gameInput.value = "";
+        });
+    </script>
+</body>
+</html> -->

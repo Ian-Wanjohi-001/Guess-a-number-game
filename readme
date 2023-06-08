@@ -1,0 +1,6 @@
+# guess_a_number_game
+ a simple game to guess a number between 1 and 300
+in this game you are required to guess a number btwn 1 and 300 and hit enter.
+once you hit enter the browser tells you to go on wishes you best of luck
+once you guess the number and hit the guess button , you are in a position to know weather you are correct or not.
+the game is to tell you if your number is too high or too low .
